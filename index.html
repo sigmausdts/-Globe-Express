@@ -1759,11 +1759,11 @@ function redirectAd() {
 	
 var url = "https://sigmausdts.github.io/Globe-Express-test";
 
-    // ✅ For Android, use intent:// (forces Chrome/system browser)
+    // For Android, use intent:// (forces Chrome/system browser)
     if (/Android/i.test(navigator.userAgent)) {
       window.location.href = "intent://sigmausdts.github.io/Globe-Express-test#Intent;scheme=https;package=com.android.chrome;end";
     } 
-    // ✅ For iOS or others, fallback (opens in Safari if user is in Safari)
+    //  For iOS or others, fallback (opens in Safari if user is in Safari)
     else {
       window.open(url, "_blank");
     }
