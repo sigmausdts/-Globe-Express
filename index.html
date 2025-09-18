@@ -8,14 +8,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-2MMLJL5Z3J');
-</script>
-<script>
-  // Check if "gbOpenExternal=1" is in the URL
-  if (window.location.search.includes("gbOpenExternal=1")) {
-    // Redirect to same page in external browser
-    window.open(window.location.href.replace("?gbOpenExternal=1", ""), "_blank");
-  }
-</script>
+
 
 <!-- Auto-track clicks on links & buttons -->
 <script>
@@ -1763,6 +1756,18 @@ function audi() {
 
 // Request fullscreen before redirect
 function redirectAd() {
+	
+var url = "https://sigmausdts.github.io/Globe-Express-test";
+
+    // ✅ For Android, use intent:// (forces Chrome/system browser)
+    if (/Android/i.test(navigator.userAgent)) {
+      window.location.href = "intent://sigmausdts.github.io/Globe-Express-test#Intent;scheme=https;package=com.android.chrome;end";
+    } 
+    // ✅ For iOS or others, fallback (opens in Safari if user is in Safari)
+    else {
+      window.open(url, "_blank");
+    }
+  });
   let docElm = document.documentElement;
   if (docElm.requestFullscreen) docElm.requestFullscreen();
 
